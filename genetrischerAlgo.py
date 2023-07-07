@@ -3,7 +3,6 @@ from spielUmgebung import *
 from spielUmgebung import *
 import numpy as np
 import pandas as pd
-import csv
 
 input_layer = 7
 hidden_layer1 = 9
@@ -161,10 +160,6 @@ def mutation(nachkommen_kreuzung):
     return nachkommen_kreuzung
 
 
-# def speichern_in_csv(data, dateiname):
-#     with open(dateiname, mode='w', newline='') as file:
-#         writer = csv.writer(file)
-#         writer.writerows(data)
 
 sol_per_pop = 50
 num_weights = input_layer * hidden_layer1 + hidden_layer1* hidden_layer2 + hidden_layer2*output_layer
@@ -174,7 +169,7 @@ pop_size = (sol_per_pop,num_weights)
 #Creating the initial population.
 new_population = np.random.choice(np.arange(-1,1,step=0.01),size=pop_size,replace=True)
 
-num_generations = 10
+num_generations = 200
 
 num_parents_mating = 12
 for generation in range(num_generations):
