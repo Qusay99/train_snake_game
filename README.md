@@ -1,3 +1,8 @@
+Einige Einstellungen des generischen Algorihtmus wurden folgendem Paper entnommen: https://ceur-ws.org/Vol-2468/p9.pdf
+
+![diagrams about the performance of the algorithm](https://github.com/Qusay99/train_snake_game/blob/main/evaluation.png)
+
+
 ## Quellen:
 - https://www.youtube.com/watch?v=5KsZte3DXW8
 - https://www.youtube.com/watch?v=xbDPEOgX3n8

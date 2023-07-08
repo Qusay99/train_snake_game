@@ -96,7 +96,6 @@ def berechne_fitness(werte,generation):
     punktzahl_liste = []
     for i in range(werte.shape[0]):
         fit, punktzahl = start_training(display, clock, werte[i], generation)
-        print(f'Fitnesswert des Chromosoms {str(i)}: ', fit)
         fitness.append(fit)
         punktzahl_liste.append(punktzahl)
     return np.array(fitness), np.array(punktzahl_liste)
