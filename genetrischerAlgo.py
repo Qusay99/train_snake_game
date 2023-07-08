@@ -41,10 +41,9 @@ def vorwaertpropagation(X, individuum: np.ndarray) -> np.ndarray:
 
 def start_training(anzeige, uhr, gewichte, generation):
     max_punktzahl = 0
-    durchschnittliche_punktzahl = 0
     test_spiele = 1
-    punktzahl1 = 0
-    schritte_pro_spiel = 2500
+    tod_score = 0
+    schritte_pro_spiel = 3000
     punktzahl2 = 0
 
     for _ in range(test_spiele):
@@ -81,11 +80,11 @@ def start_training(anzeige, uhr, gewichte, generation):
             naechster_schritt = schlange_position[0] + aktueller_richtungsvektor
             if boundaries_collision(schlange_position[0]) == 1 or collision_with_self(naechster_schritt.tolist(),
                                                                                                schlange_position) == 1:
-                punktzahl1 += -150
+                tod_score += -150
                 break
 
             else:
-                punktzahl1 += 0
+                tod_score += 0
 
             schlange_position, apfel_position, punktzahl = play_game(schlange_start, schlange_position, apfel_position,
                                                                        richtung_taste, punktzahl, anzeige, uhr, generation)
@@ -97,7 +96,7 @@ def start_training(anzeige, uhr, gewichte, generation):
                 punktzahl2 -= 1
             else:
                 punktzahl2 += 2
-    belohnung = punktzahl1 + punktzahl2 + max_punktzahl * 5000
+    belohnung = tod_score + punktzahl2 + (max_punktzahl * 5000)
 
 
     return belohnung, punktzahl
@@ -154,14 +153,14 @@ def mutation(nachkommen_kreuzung):
         for _ in range(25):
             i = randint(0, nachkommen_kreuzung.shape[1]-1)
 
-        random_value = np.random.choice(np.arange(-1, 1, step=0.001), size=(1), replace=False)
+        random_value = np.random.choice(np.arange(-1, 1, step=0.05), size=(1), replace=False)
         nachkommen_kreuzung[idx, i] = nachkommen_kreuzung[idx, i] + random_value
 
     return nachkommen_kreuzung
 
 
 
-sol_per_pop = 50
+sol_per_pop = 100
 num_weights = input_layer * hidden_layer1 + hidden_layer1* hidden_layer2 + hidden_layer2*output_layer
 
 # Defining the population size.
@@ -171,13 +170,14 @@ new_population = np.random.choice(np.arange(-1,1,step=0.01),size=pop_size,replac
 
 num_generations = 200
 
-num_parents_mating = 12
+# Berechnung der Anzahl der Eltern, die ausgewählt werden sollen (20% der Populationsgröße)
+num_parents_mating = int(0.2 * pop_size[0])
 for generation in range(num_generations):
-    print('##############        GENERATION ' + str(generation)+ '  ###############' )
+    print('Generation:\t', generation)
     # Measuring the fitness of each chromosome in the population.
     fitness, punktzahl = berechne_fitness(new_population, generation)
     df = df.append({"generation":generation,"gen_highest_Fitness":np.max(fitness),"gen_higest_score": np.max(punktzahl)}, ignore_index=True)
-    print('#######  fittest chromosome in gneneration ' + str(generation) +' is having fitness value:  ', np.max(fitness))
+    print('Höchst ereichter Fitnesswert:\t', generation)
     # Selecting the best parents in the population for mating.
     eltern = eltern_finden(new_population, fitness, num_parents_mating)
 
