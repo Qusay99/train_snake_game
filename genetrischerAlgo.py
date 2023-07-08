@@ -1,19 +1,7 @@
-from random import choice, randint
-from spielUmgebung import *
+from random import randint
 from spielUmgebung import *
 import numpy as np
 import pandas as pd
-
-input_layer = 7
-hidden_layer1 = 9
-hidden_layer2 = 15
-output_layer = 3
-
-matrix1_form = (hidden_layer1,input_layer)
-matrix2_form = (hidden_layer2,hidden_layer1)
-matrix3_form = (output_layer,hidden_layer2)
-
-df = pd.DataFrame(columns=["generation","gen_highest_Fitness","gen_higest_score"])
 
 # Durchführung der Vorwärtspropagation
 def vorwaertpropagation(X, individuum: np.ndarray) -> np.ndarray:
@@ -158,9 +146,18 @@ def mutation(nachkommen_kreuzung):
 
     return nachkommen_kreuzung
 
+input_layer = 7
+hidden_layer1 = 9
+hidden_layer2 = 15
+output_layer = 3
 
+matrix1_form = (hidden_layer1,input_layer)
+matrix2_form = (hidden_layer2,hidden_layer1)
+matrix3_form = (output_layer,hidden_layer2)
 
-sol_per_pop = 100
+df = pd.DataFrame(columns=["generation","gen_highest_Fitness","gen_higest_score"])
+
+sol_per_pop = 50
 num_weights = input_layer * hidden_layer1 + hidden_layer1* hidden_layer2 + hidden_layer2*output_layer
 
 # Defining the population size.
@@ -177,7 +174,7 @@ for generation in range(num_generations):
     # Measuring the fitness of each chromosome in the population.
     fitness, punktzahl = berechne_fitness(new_population, generation)
     df = df.append({"generation":generation,"gen_highest_Fitness":np.max(fitness),"gen_higest_score": np.max(punktzahl)}, ignore_index=True)
-    print('Höchst ereichter Fitnesswert:\t', generation)
+    print('Höchst ereichter Fitnesswert:\t', np.max(fitness))
     # Selecting the best parents in the population for mating.
     eltern = eltern_finden(new_population, fitness, num_parents_mating)
 
