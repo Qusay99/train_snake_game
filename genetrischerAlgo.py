@@ -156,7 +156,7 @@ matrix3_form = (output_layer,hidden_layer2)
 
 df = pd.DataFrame(columns=["generation","gen_highest_Fitness","gen_higest_score"])
 
-sol_per_pop = 50
+sol_per_pop = 100
 num_weights = input_layer * hidden_layer1 + hidden_layer1* hidden_layer2 + hidden_layer2*output_layer
 
 # Defining the population size.

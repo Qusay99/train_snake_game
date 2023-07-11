@@ -2,6 +2,8 @@ Einige Einstellungen des generischen Algorihtmus wurden folgendem Paper entnomme
 
 ![diagrams about the performance of the algorithm](https://github.com/Qusay99/train_snake_game/blob/main/evaluation.png)
 
+After increasing the population size:
+![diagrams about the performance of the algorithm](https://github.com/Qusay99/train_snake_game/blob/main/evaluation2.png)
 
 ## Quellen:
 - https://www.youtube.com/watch?v=5KsZte3DXW8
