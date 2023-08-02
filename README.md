@@ -1,6 +1,6 @@
 Dieses Repository beinhaltet die Implementierung eines evolutionären Algorithmus zur Optimierung der Spielleistung eines Snake-Games mithilfe von neuronalen Netzwerken.
 
-Verwendete Algorithmen:
+Verwendete Methoden:
 
 - **Evolutionärer Algorithmus:** Der Algorithmus simuliert die natürliche Evolution und nutzt dabei Selektion, Kreuzung und Mutation, um eine bessere Lösung für ein gegebenes Optimierungsproblem zu finden. In diesem Fall wird der Algorithmus verwendet, um die besten Gewichtungen für das neuronale Netzwerk zu identifizieren.
 - **Vorwärtspropagation:** Die Vorwärtspropagation ist der Prozess, bei dem die Eingabedaten durch das neuronale Netzwerk propagiert werden, um die Ausgabe zu generieren. Hier wird sie verwendet, um die Vorhersagen der KI basierend auf den aktuellen Gewichtungen zu erhalten.
