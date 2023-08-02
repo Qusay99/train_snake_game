@@ -1,6 +1,11 @@
-In diesem Projekt wurde ein Snake-Spiel mit Hilfe eines genetrischen Algorithmus trainiert
+Dieses Repository beinhaltet die Implementierung eines evolutionären Algorithmus zur Optimierung der Spielleistung eines Snake-Games mithilfe von neuronalen Netzwerken.
 
-Einige Einstellungen des generischen Algorithmus wurden folgendem Paper entnommen: https://ceur-ws.org/Vol-2468/p9.pdf
+Verwendete Algorithmen:
+
+- **Evolutionärer Algorithmus:** Der Algorithmus simuliert die natürliche Evolution und nutzt dabei Selektion, Kreuzung und Mutation, um eine bessere Lösung für ein gegebenes Optimierungsproblem zu finden. In diesem Fall wird der Algorithmus verwendet, um die besten Gewichtungen für das neuronale Netzwerk zu identifizieren.
+- **Vorwärtspropagation:** Die Vorwärtspropagation ist der Prozess, bei dem die Eingabedaten durch das neuronale Netzwerk propagiert werden, um die Ausgabe zu generieren. Hier wird sie verwendet, um die Vorhersagen der KI basierend auf den aktuellen Gewichtungen zu erhalten.
+
+Während der Implementierung wurde einige Einstellungen für den Algorihtmus folgendem Paper entnommen: https://ceur-ws.org/Vol-2468/p9.pdf
 
 Im Verlauf der Entwicklungs- und Evaluierungsphasen wurden diverse Fitnessfunktionen implementiert und einer gründlichen Prüfung unterzogen. In der abschließenden Phase erfolgte die Selektion der optimalen Fitnessfunktion, gefolgt von mehreren Evaluierungsdurchgängen. Hervorzuheben ist, dass nur die unten dargestellten Evaluierungsdurchgänge protokolliert wurden, da bei ihnen bedeutende Leistungsdisparitäten infolge der Parameteranpassungen beobachtet wurden.
 
