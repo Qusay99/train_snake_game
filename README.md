@@ -1,8 +1,10 @@
 Einige Einstellungen des generischen Algorihtmus wurden folgendem Paper entnommen: https://ceur-ws.org/Vol-2468/p9.pdf
 
+Im Verlauf der Entwicklungs- und Evaluierungsphasen wurden diverse Fitnessfunktionen implementiert und einer gründlichen Prüfung unterzogen. In der abschließenden Phase erfolgte die Selektion der optimalen Fitnessfunktion, gefolgt von mehreren Evaluierungsdurchgängen. Hervorzuheben ist, dass nur die unten dargestellten Evaluierungsdurchgänge protokolliert wurden, da bei ihnen bedeutende Leistungsdisparitäten infolge der Parameteranpassungen beobachtet wurden.
+
 ![diagrams about the performance of the algorithm](https://github.com/Qusay99/train_snake_game/blob/main/evaluation.png)
 
-After increasing the population size:
+Die Ergebnisse nach Erhöhung der Populationsgröße:
 ![diagrams about the performance of the algorithm](https://github.com/Qusay99/train_snake_game/blob/main/evaluation2.png)
 
 ## Quellen:
