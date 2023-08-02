@@ -159,11 +159,9 @@ df = pd.DataFrame(columns=["generation","gen_highest_Fitness","gen_higest_score"
 sol_per_pop = 100
 num_weights = input_layer * hidden_layer1 + hidden_layer1* hidden_layer2 + hidden_layer2*output_layer
 
-# Defining the population size.
+# Populationsgroesse festlegen.
 pop_size = (sol_per_pop,num_weights)
-#Creating the initial population.
 new_population = np.random.choice(np.arange(-1,1,step=0.01),size=pop_size,replace=True)
-
 num_generations = 200
 
 # Berechnung der Anzahl der Eltern, die ausgewählt werden sollen (20% der Populationsgröße)
@@ -174,16 +172,9 @@ for generation in range(num_generations):
     fitness, punktzahl = berechne_fitness(new_population, generation)
     df = df.append({"generation":generation,"gen_highest_Fitness":np.max(fitness),"gen_higest_score": np.max(punktzahl)}, ignore_index=True)
     print('Höchst ereichter Fitnesswert:\t', np.max(fitness))
-    # Selecting the best parents in the population for mating.
     eltern = eltern_finden(new_population, fitness, num_parents_mating)
-
-    # Generating next generation using crossover.
     nachfolger_crossover = kreuzung(eltern, nachkommen_groeße=(pop_size[0] - eltern.shape[0], num_weights))
-
-    # Adding some variations to the offsrping using mutation.
     offspring_mutation = mutation(nachfolger_crossover)
-
-    # Creating the new population based on the parents and offspring.
     new_population[0:eltern.shape[0], :] = eltern
     new_population[eltern.shape[0]:, :] = offspring_mutation
 

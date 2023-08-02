@@ -14,18 +14,6 @@ weiß = (255, 255, 255)
 gruen = (0, 255, 0)
 rot = (255, 0, 0)
 
-
-'''
-Codierung der Richtungsbefehle:
-
-Nach Links -> button_direction = 0
-Nach Rechts -> button_direction = 1
-Nach unten ->button_direction = 2
-Nach oben -> button_direction = 3
-'''
-
-
-
 pygame.init()
 display=pygame.display.set_mode((fensterbreite,fensterhohe))
 clock=pygame.time.Clock()

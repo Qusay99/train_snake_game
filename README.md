@@ -1,4 +1,6 @@
-Einige Einstellungen des generischen Algorihtmus wurden folgendem Paper entnommen: https://ceur-ws.org/Vol-2468/p9.pdf
+In diesem Projekt wurde ein Snake-Spiel mit Hilfe eines genetrischen Algorithmus trainiert
+
+Einige Einstellungen des generischen Algorithmus wurden folgendem Paper entnommen: https://ceur-ws.org/Vol-2468/p9.pdf
 
 Im Verlauf der Entwicklungs- und Evaluierungsphasen wurden diverse Fitnessfunktionen implementiert und einer gründlichen Prüfung unterzogen. In der abschließenden Phase erfolgte die Selektion der optimalen Fitnessfunktion, gefolgt von mehreren Evaluierungsdurchgängen. Hervorzuheben ist, dass nur die unten dargestellten Evaluierungsdurchgänge protokolliert wurden, da bei ihnen bedeutende Leistungsdisparitäten infolge der Parameteranpassungen beobachtet wurden.
 
