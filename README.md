@@ -1,3 +1,4 @@
+## Überblick
 Dieses Repository beinhaltet die Implementierung eines evolutionären Algorithmus zur Optimierung der Spielleistung eines Snake-Games mithilfe von neuronalen Netzwerken.
 
 Verwendete Methoden:
@@ -18,6 +19,16 @@ Die Ergebnisse nach Erhöhung der Populationsgröße:
 <p align="center">
   <img src="https://github.com/Qusay99/train_snake_game/blob/main/eval_img/evaluation2.png" align="center" width=65% height=50%>
 </p>
+
+## Ausführung
+Um das Training auszuführen, stellen Sie zuerst sicher, dass Sie alle notwendigen Packages installiert haben:
+```
+pip install -r requirements.txt
+```
+Danach können Sie das Training mit folgendem Befehl starten:
+```
+python genetrischerAlgo.py
+```
 
 ## Quellen:
 - https://www.youtube.com/watch?v=5KsZte3DXW8
