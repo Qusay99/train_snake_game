@@ -5,13 +5,13 @@ Einige Einstellungen des generischen Algorithmus wurden folgendem Paper entnomme
 Im Verlauf der Entwicklungs- und Evaluierungsphasen wurden diverse Fitnessfunktionen implementiert und einer gründlichen Prüfung unterzogen. In der abschließenden Phase erfolgte die Selektion der optimalen Fitnessfunktion, gefolgt von mehreren Evaluierungsdurchgängen. Hervorzuheben ist, dass nur die unten dargestellten Evaluierungsdurchgänge protokolliert wurden, da bei ihnen bedeutende Leistungsdisparitäten infolge der Parameteranpassungen beobachtet wurden.
 
 <p align="center">
-  <img src="https://github.com/Qusay99/train_snake_game/blob/main/evaluation.png" align="center" width=65% height=50%>
+  <img src="https://github.com/Qusay99/train_snake_game/blob/main/eval_img/evaluation.png" align="center" width=65% height=50%>
 </p>
 
 Die Ergebnisse nach Erhöhung der Populationsgröße:
 
 <p align="center">
-  <img src="https://github.com/Qusay99/train_snake_game/blob/main/evaluation.png" align="center" width=65% height=50%>
+  <img src="https://github.com/Qusay99/train_snake_game/blob/main/eval_img/evaluation2.png" align="center" width=65% height=50%>
 </p>
 
 ## Quellen:
